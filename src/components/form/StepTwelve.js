@@ -79,7 +79,7 @@ const StepThree = ({ setForm, formData, navigation }) => {
           <Form.Group controlId="formGridAddress1">
             <Form.Control
               label="Straße und Hausnummer"
-              placeholder="Strabe und Hausnummer"
+              placeholder="Straße und Hausnummer"
              
               onChange={(e)=> {formData.address = e.target.value}}
             />
@@ -135,7 +135,7 @@ const StepThree = ({ setForm, formData, navigation }) => {
               onClick = {async () => {
                 next()
                 await axios
-                  .post("https://eigenheim-backend.herokuapp.com/create-form/", formData);
+                  .post("http://localhost:8080/create-form/", formData);
                   
               }
             }
