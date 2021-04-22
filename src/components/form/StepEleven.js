@@ -88,18 +88,18 @@ const StepThree = ({ setForm, formData, navigation }) => {
            
           >
             <option disabled>Monat</option>
-            <option value="january">Januar</option>
-            <option value="february">Februar</option>
-            <option value="march">März</option>
-            <option value="march">April</option>
-            <option value="march">Mai</option>
-            <option value="march">Juni</option>
-            <option value="march">Juli</option>
-            <option value="march">August</option>
-            <option value="march">September</option>
-            <option value="march">Oktober</option>
-            <option value="march">November</option>
-            <option value="march">Dezember</option>
+            <option value="Januar">Januar</option>
+            <option value="Februar">Februar</option>
+            <option value="März">März</option>
+            <option value="April">April</option>
+            <option value="Mai">Mai</option>
+            <option value="Juni">Juni</option>
+            <option value="Juli">Juli</option>
+            <option value="August">August</option>
+            <option value="September">September</option>
+            <option value="Oktober">Oktober</option>
+            <option value="November">November</option>
+            <option value="Dezember">Dezember</option>
           </select>
           <select
             name="year"
