@@ -33,42 +33,66 @@ select {
 
 .text_form {
   font-size: 20px;
-  color: #000000;
+  color: rgb(0, 75, 84) !important;
   max-width: 100%;
   text-align: center;
-  line-height: 20px;
+  line-height: 24px;
+  font-size: 24px;
+    line-height: 32px;
+    white-space: pre-line;
 }
 @media screen and (max-device-width: 480px) and (orientation: portrait) {
   .text_form {
     line-height: 27px;
     font-size: 17px;
   }
-  form {
-    width: 300px;
+  .form {
+   
   }
+ 
+  .btn-primary {
+    width: 300px !important;
+  height: 50px !important;
+  text-align: left;
+    margin-bottom: 10px;
+  }
+
 }
 .btn-primary {
-  color: white;
-  background-color: #577b0a;
+  color:#024B54;
+  background-color: white;
   border: none;
-  padding: 15px 0px 15px 0px;
-  border-radius: 8px;
+  
+  border-radius: 0px;
   font-size: x-large;
-  width: 300px;
+  margin-left: 10px;
+  box-shadow: rgb(0 0 0 / 16%) 5px 5px 20px;
+  text-decoration: #024B54;
+  font-size: 16px;
+  width: 150px;
+  height: 350px;
 }
 .btn-primary:hover {
   color: white;
-  background-color: #577b0a !important;
+  background-color: #FAD705 !important;
 }
-.btn-sample:active:focus {
+.btn-primary:active:focus {
   color: white;
-  background-color: #577b0a !important;
+  background-color: #FAD705 !important;
   box-shadow: none;
 }
 .btn_container {
   margin-top: 45px;
   margin-bottom: 45px;
   display: block;
+}
+
+@media only screen and (max-width: 600px) {
+  .btn_container {
+    margin-top: 45px;
+    margin-bottom: 45px;
+    display: flex;
+  }
 }
 
 .align_btn {
@@ -144,7 +168,7 @@ select {
 }
 
 form {
-  display: inline-block;
+ 
 }
 .form-control {
   height: 50px;
@@ -205,4 +229,50 @@ input:checked label::after {
  .animation_desciption{
   margin-left: 28px;
 }
+}
+
+.btn-img{
+  display: block;
+  height: 64px;
+  max-width: 100%;
+  margin-left: 30px;
+  margin-bottom: 5px;
+}
+
+.btn_container_slider{
+  box-shadow: rgb(0 0 0 / 16%) 5px 5px 20px;
+  height: 350px;
+
+  margin-left: 35px;
+  margin-right: 35px;
+}
+.Row_MultiStep{
+ display: flex;
+ padding-top:25px;
+}
+.btn_container_slider_mobile{
+  display: none;
+}
+
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+  .btn_container_slider{
+    display: none;
+  }
+ 
+  .btn_container_slider_mobile{
+    display: grid;
+    margin-left: 10%;
+    width: 100%;
+  }
+  .map-img{
+    margin-left: -45px;
+  }
+  .map-text{
+    width: 100% !important;
+  }
+  .input_map{
+    width: 70% !important;
+    margin-left: 11%;
+    margin-top: 20px;
+  } 
 }

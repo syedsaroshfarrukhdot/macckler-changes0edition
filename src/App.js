@@ -11,11 +11,10 @@ function App() {
    <Header />
    <div className="site_wrapper">
     <div className="wrraper_header">
-      <h2 className="form_header">Kostenlose Finanzierungsangebote einholen</h2>
+     
     </div>
    <MultiStepForm />
    </div>
-   <Footer />
    </div>
   );
 }

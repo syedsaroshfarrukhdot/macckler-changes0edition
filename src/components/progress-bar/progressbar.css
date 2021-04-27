@@ -6,7 +6,7 @@
 	background-color: white;
 	border-radius: 20px;
 	position: relative;
-	margin: 15px 0;
+	margin: 5px 0;
 	height: 30px;
 	width: 300px;
 }
@@ -14,7 +14,7 @@
 .progress-done {
 	background: linear-gradient(to left, #577B0A, #577B0A);
 	box-shadow: 0 3px 3px -5px #577B0A, 0 2px 5px #577B0A;
-	border-radius: 20px;
+	border-radius: 0px;
 	color: #fff;
 	display: flex;
 	align-items: center;

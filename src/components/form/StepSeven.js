@@ -1,72 +1,99 @@
 import React, { useEffect, useState } from "react";
-import formImageTwo from "../../images/ekom-sign.png";
-import { Button, ButtonGroup } from "react-bootstrap";
+import formLogo from '../../images/icon-wohngeld.png'
+import formImageTwo from '../../images/tuev_500.png'
+import basic from '../../images/basic.svg'
+import average from '../../images/average.svg'
+import best from '../../images/best.svg'
+import { Button } from 'react-bootstrap';
+import styled from "styled-components";
 import ProgressBar from "../progress-bar/ProgressBar";
-import Slider from "../slider/Slider";
 
-const StepSeven = ({ setForm, formData, navigation }) => {
-  const { phone, email } = formData;
+const Styles = styled.div`
 
-  const { previous, next } = navigation;
+.btn-primary {
+  color:#024B54;
+  background-color: white;
+  border: none;
+  
+  border-radius: 0px;
+  font-size: x-large;
+  margin-left: 10px;
+  box-shadow: rgb(0 0 0 / 16%) 5px 5px 20px;
+  text-decoration: #024B54;
+  font-size: 16px;
+  width: 225px;
+  height: 350px;
+}
+.btn-img{
+  display: block;
+  height: 75px;
+  max-width: 100%;
+  margin-left: 68px;
+  margin-bottom: 5px;
+}
 
-  const [value, setValue] = useState(49.8);
+
+`;
+
+
+
+
+const StepOne = ({ setForm, formData, navigation }) => {
+  const { firstName, lastName, nickName } = formData;
+
+  const { next } = navigation;
+
+  const [value, setValue] = useState(80);
 
   useEffect(() => {
     const interval = setTimeout(() => {
       setValue((oldValue) => {
-        const newValue = oldValue + 8.3;
+        const newValue = oldValue + 9;
 
         return newValue;
       });
     }, 200);
   }, []);
 
-  const myCallBack = (statefromchild) => {
-    formData.StepSeven = statefromchild;
-  }
-
   return (
     <div className="form">
-      <p className="text_form_step_2">Wie hoch sind die geplanten Nebenkosten?</p>
-      <p className="text_form_step_3">
-        Grunderwerbssteuer, Notar, Makler - in der Regel ca. 10%
-      </p>
-
-      <div className="btn_container">
-        <Slider
-          left_text="0 €"
-          right_text="50.000 €"
-          value="25000"
-          min="0"
-          max="50000"
-          step={1000}
-          callBackFromParent={myCallBack}
-        />
-        <div className="align_btn">
-          <Button variant="primary" 
-          onClick={()=> {
-            console.log(formData)
-            next()
-            }} value="Weiter">
-            Weiter
-          </Button>
-        </div>
-      </div>
-
+       
+     
       <div className="progress_bar_container">
         <div className="progress_align">
+        <p className="text_form">Bitte wählen Sie den Qualitätsstandard der Immobilie</p>
           <ProgressBar
-            color={"#577B0A"}
-            width={"300px"}
+            color={"#085159"}
+            width={"750px"}
             value={value}
             max={100}
           />
         </div>
       </div>
 
-      <img src={formImageTwo} alt="img" className="imageCover" />
+      <div className="btn_container">
+        <Styles>
+        <Button variant="primary" onClick={next} value="Weiter">&nbsp;<img  className="btn-img" src={basic} />Einfach</Button>
+        <Button variant="primary" onClick={next} value="Weiter">&nbsp;<img  className="btn-img" src={average} />Normal</Button>
+        <Button variant="primary" onClick={next} value="Weiter">&nbsp;<img  className="btn-img" src={best} />Gehoben</Button>
+        </Styles>
+      </div>
+      <div className="btn_container_mobile">
+      <Button variant="primary" onClick={next} value="Weiter">&nbsp;Einfach</Button>
+        <Button variant="primary" onClick={next} value="Weiter">&nbsp;Normal</Button>
+        <Button variant="primary" onClick={next} value="Weiter">&nbsp;Gehoben</Button>
+      </div>
+
+    
+
+      <img
+        src={formImageTwo}
+        alt="img"
+        className="imageCover"
+      />
     </div>
+    
   );
 };
 
-export default StepSeven;
+export default StepOne;

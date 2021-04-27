@@ -12,17 +12,21 @@ const Container = Styled.div`
 
     -webkit-appearance: none;
     appearance: none;
+    @media screen and (max-device-width: 480px) and (orientation: portrait) {
+      width:250px;
+    }
   }
 
+
   progress[value]::-webkit-progress-bar {
-    height: 10px;
-    border-radius: 20px;
+    height: 5px;
+    border-radius: 0px;
     background-color: white;
   }  
 
   progress[value]::-webkit-progress-value {
-    height: 10px;
-    border-radius: 20px;
+    height: 5px;
+    border-radius: 0px;
     background-color: ${props => props.color};
     transition: 0.5s ease 0.3s;
   }

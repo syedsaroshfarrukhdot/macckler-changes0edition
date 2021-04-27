@@ -1,74 +1,90 @@
 import React, { useEffect, useState } from "react";
-import formImageTwo from "../../images/ekom-sign.png";
+import totalflat from "../../images/total-flat-sq.svg";
 import { Button, ButtonGroup } from "react-bootstrap";
 import ProgressBar from "../progress-bar/ProgressBar";
+import Slider from "../slider/Slider";
+import formImageTwo from '../../images/tuev_500.png'
+
 
 const StepTwo = ({ setForm, formData, navigation }) => {
   const { StepOne } = formData;
 
   const { previous, next } = navigation;
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState(12);
 
   useEffect(() => {
     const interval = setTimeout(() => {
       setValue((oldValue) => {
-        const newValue = oldValue + 8.3;
+        const newValue = oldValue + 7;
 
         return newValue;
       });
     }, 200);
   }, []);
 
- 
-
+  const myCallBack = (statefromchild) => {
+    formData.StepSix = statefromchild;
+  };
 
   return (
     <div className="form">
-      <p className="text_form_step_2">Was möchten Sie finanzieren?</p>
-
-      <div className="btn_container">
-        <div className="align_btn">
-          <Button
-            variant="primary"
-            name="StepOne"
-            onClick={() => {
-              formData.StepTwo = "Neubau einer Immobilie"
-              next()
-              console.log(formData)
-            }}
-            
-          >
-            Neubau einer Immobilie
-          </Button>
-          <br></br>
-          <Button
-              variant="primary"
-              name="StepOne"
-              onClick={() => {
-                formData.StepTwo = "Kauf einer Immobilie"
-                next()
-                console.log(formData)
-              }}
-            
-            
-          >
-            Kauf einer Immobilie
-          </Button>
-        </div>
-      </div>
-
-      <div className="progress_bar_container">
+       <div className="progress_bar_container">
         <div className="progress_align">
+        <p className="text_form">Wie groß ist die Wohnfläche des Hauses?</p>
           <ProgressBar
-            color={"#577B0A"}
-            width={"300px"}
+            color={"#085159"}
+            width={"750px"}
             value={value}
             max={100}
           />
         </div>
       </div>
 
-      <img src={formImageTwo} alt="img" className="imageCover" />
+
+      <div className="btn_container_slider">
+        <div className="Row_MultiStep">
+          <Slider
+            left_text="<50 m²"
+            right_text=">500 m²"
+            value="250"
+            min="50"
+            max="500"
+            unit="m²"
+            text="Alternativ eintippen"
+            callBackFromParent={myCallBack}
+          />
+           <img className="img_slider_sasas" src={totalflat} />
+          
+        </div>
+        <Button variant="danger" onClick={next} >Weiter ></Button>
+      </div>
+      
+      <div className="btn_container_slider_mobile_slider">
+      <img className="img_slider_sasas" src={totalflat} />
+        <div className="Row_MultiStep">
+          <Slider
+            left_text="<50 m²"
+            right_text=">500 m²"
+            value="250"
+            min="50"
+            max="500"
+            unit="m²"
+            text="Alternativ eintippen"
+            callBackFromParent={myCallBack}
+          />
+           
+          
+        </div>
+        <Button variant="danger" onClick={next} >Weiter ></Button>
+      </div>
+     
+     
+
+      <img
+        src={formImageTwo}
+        alt="img"
+        className="imageCover"
+      />
     </div>
   );
 };

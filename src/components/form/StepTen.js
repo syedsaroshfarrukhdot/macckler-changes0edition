@@ -11,12 +11,12 @@ const StepThree = ({ setForm, formData, navigation }) => {
 
   const { previous, next } = navigation;
 
-  const [value, setValue] = useState(74.7);
+  const [value, setValue] = useState(90);
 
   useEffect(() => {
     const interval = setTimeout(() => {
       setValue(oldValue => {
-        const newValue = oldValue + 8.3;
+        const newValue = oldValue +10;
 
 
         return newValue;
@@ -28,7 +28,18 @@ const StepThree = ({ setForm, formData, navigation }) => {
   return (
     <div className="form">
       
-    <p className="text_form_step_2">Wie hoch ist Ihr monatliches Haushaltsnettoeinkommen?</p>
+  
+    <div className="progress_bar_container">
+        <div className="progress_align">
+        <p className="text_form">Wie hoch ist Ihr monatliches Haushaltsnettoeinkommen?</p>
+          <ProgressBar
+            color={"#085159"}
+            width={"750px"}
+            value={value}
+            max={100}
+          />
+        </div>
+      </div>
   
 
     <div className="btn_container">

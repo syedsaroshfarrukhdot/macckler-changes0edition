@@ -1,81 +1,72 @@
 import React, { useEffect, useState } from "react";
-import formImageTwo from "../../images/ekom-sign.png";
+import formImageTwo from '../../images/tuev_500.png'
+
 import { Button, ButtonGroup } from "react-bootstrap";
 import ProgressBar from "../progress-bar/ProgressBar";
+import Slider from "../slider/Slider";
+import totalflat from "../../images/baujahr.svg";
 
 const StepThree = ({ setForm, formData, navigation }) => {
   const { phone, email } = formData;
 
   const { previous, next } = navigation;
 
-  const [value, setValue] = useState(33.2);
+  const [value, setValue] = useState(33);
 
   useEffect(() => {
     const interval = setTimeout(() => {
       setValue((oldValue) => {
-        const newValue = oldValue + 8.3;
+        const newValue = oldValue + 7;
 
         return newValue;
       });
     }, 200);
   }, []);
 
+
+  const myCallBack = (statefromchild) => {
+    formData.StepSix = statefromchild;
+  };
+
   return (
     <div className="form">
-      <p className="text_form_step_2">Wann möchten Sie finanzieren?</p>
-
-      <div className="btn_container">
-        <div className="align_btn">
-          <Button
-            variant="primary"
-            onClick={() => {
-              formData.StepFive = "In weniger als 3 Monaten";
-              next();
-              console.log(formData);
-            }}
-            value="In weniger als 3 Monaten"
-          >
-            In weniger als 3 Monaten
-          </Button>
-          <br></br>
-          <Button
-            variant="primary"
-            onClick={() => {
-              formData.StepFive = " In 3-6 Monaten";
-              next();
-              console.log(formData);
-            }}
-            value="In 3-6 Monaten"
-          >
-            In 3-6 Monaten
-          </Button>
-          <br></br>
-          <Button
-            variant="primary"
-            onClick={() => {
-              formData.StepFive = " In über 6 Monaten";
-              next();
-              console.log(formData);
-            }}
-            value="In über 6 Monaten"
-          >
-            In über 6 Monaten
-          </Button>
-        </div>
-      </div>
-
+      
       <div className="progress_bar_container">
         <div className="progress_align">
+        <p className="text_form">
+          Wann wurde das Haus erbaut?
+        </p>
           <ProgressBar
-            color={"#577B0A"}
-            width={"300px"}
+            color={"#085159"}
+            width={"750px"}
             value={value}
             max={100}
-          />{" "}
+          />
         </div>
       </div>
 
-      <img src={formImageTwo} alt="img" className="imageCover" />
+      <div className="btn_container_slider">
+        <div className="Row_MultiStep">
+          <Slider
+            left_text="<  1900"
+            right_text="> 2020"
+            value="1950"
+            min="1900"
+            max="2020"
+            step="1"
+            text="Alternativ eingeben"
+            callBackFromParent={myCallBack}
+          />
+           <img className="img_slider_sasas" src={totalflat} />
+          
+        </div>
+        <Button variant="danger" onClick={next} >Weiter ></Button>
+      </div>
+      <img
+        src={formImageTwo}
+        alt="img"
+        className="imageCover"
+      />
     </div>
   );
 };

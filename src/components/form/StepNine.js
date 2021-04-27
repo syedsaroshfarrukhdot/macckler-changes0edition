@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
-import formImageTwo from "../../images/ekom-sign.png";
+import map from "../../images/map.png";
+import pin from "../../images/pin-grey.svg";
+import formImageTwo from '../../images/tuev_500.png'
+
 import { Button, ButtonGroup } from "react-bootstrap";
 import ProgressBar from "../progress-bar/ProgressBar";
 import Slider from "../slider/Slider";
@@ -9,12 +12,12 @@ const StepThree = ({ setForm, formData, navigation }) => {
 
   const { previous, next } = navigation;
 
-  const [value, setValue] = useState(66.4);
+  const [value, setValue] = useState(90);
 
   useEffect(() => {
     const interval = setTimeout(() => {
       setValue((oldValue) => {
-        const newValue = oldValue + 8.3;
+        const newValue = oldValue + 10;
 
         return newValue;
       });
@@ -23,63 +26,53 @@ const StepThree = ({ setForm, formData, navigation }) => {
 
   return (
     <div className="form">
-      <p className="text_form_step_2">
-        In welchem Beschäftigungsverhältnis stehen Sie?"
-      </p>
-
-      <div className="btn_container">
-        <div className="align_btn">
-          <Button
-            variant="primary"
-            onClick={() => {
-              formData.StepNine = "Angestellte/r";
-              next();
-              console.log(formData);
-            }}
-            value="Angestellte/r"
-          >
-            Angestellte/r
-          </Button>
-          <br></br>
-          <Button
-            variant="primary"
-            onClick={() => {
-              formData.StepNine = "Freiberufler/Selbständiger "
-              next();
-              console.log(formData);
-            }}
-            value="Freiberufler/Selbständiger"
-          >
-            Freiberufler/Selbständiger
-          </Button>
-          <br></br>
-          <Button
-            variant="primary"
-            onClick={() => {
-              formData.StepNine = "Arbeitssuchend";
-              next();
-              console.log(formData);
-            }}
-            value="Arbeitssuchend"
-          >
-            Arbeitssuchend
-          </Button>
-        </div>
-      </div>
-
+     
       <div className="progress_bar_container">
         <div className="progress_align">
+        <p className="text_form">
+      In welcher Region befindet sich die Immobilie?
+      </p>
           <ProgressBar
-            color={"#577B0A"}
-            width={"300px"}
+            color={"#085159"}
+            width={"750px"}
             value={value}
             max={100}
           />
         </div>
       </div>
 
-      <img src={formImageTwo} alt="img" className="imageCover" />
-    </div>
+      <div className="btn_container_slider">
+        <div className="map_slider">
+          <img src={map} className="map_img"/>
+          <img src={pin} className="pin_img"/>
+          <div className="input_map">
+          <label className="label_map">Postleitzahi</label>
+          <input type="number" placeholder="z.B 12357" className="input_field_map"/>
+          <p className="map_text">Wir benötigen Ihre Postleitzahl, um den Wert Ihrer Immobilie besser ermitteln zu können.</p>
+          <Button variant="success" onClick={next} >Weiter ></Button>
+        </div>
+        </div>
+        
+      </div>
+      <div className="btn_container_slider_mobile">
+        <div className="map_slider">
+          <img src={map} className="map_img"/>
+          <img src={pin} className="pin_img"/>
+          
+        </div>
+        <div className="input_map">
+        <label className="label_map">Postleitzahi</label>
+          <input type="number" placeholder="z.B 12357" className="input_field_map"/>
+          <p className="map_text">Wir benötigen Ihre Postleitzahl, um den Wert Ihrer Immobilie besser ermitteln zu können.</p>
+          <Button variant="success" onClick={next} >Weiter ></Button>
+        </div>
+      </div>
+      <img
+        src={formImageTwo}
+        alt="img"
+        className="imageCover"
+      />
+     </div>
   );
 };
 
