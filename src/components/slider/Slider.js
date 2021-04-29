@@ -27,6 +27,12 @@ margin-bottom : 2rem;
 margin-left: 4rem;
 margin-right: 5rem;
 
+@media (max-width: 600px) {
+
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: -50px;
+}
 
 
 input {
@@ -42,11 +48,12 @@ input {
   display: -ms-flexbox;
   display: flex;
   height: 100%;
-  min-height: 50px;
+  min-height: 45px;
   overflow: hidden;
   width: 400px;
   @media screen and (max-device-width: 480px) and (orientation: portrait) {
-    width: 250px;
+    width: 90%;
+    margin-left: 22px;
   }
 }
 
@@ -172,7 +179,7 @@ export default class Slider extends React.Component {
              <div className="slider_label_parent">
               <label className="slider_label_text">{this.props.text}</label>
              </div>
-             <div>
+             <div className="a">
              <input className="input_text_slider" type="number" min="50" max="500" value={this.state.value}  onChange={this.handleOnChange}/>
              <span className="unit_input">{this.props.unit}</span>
              </div>

@@ -6,6 +6,7 @@
   padding: 0;
   width: 32px;
 }
+
 .progress-bar.jsx-1297060787 {
   height: 4px;
   min-height: 4px;
@@ -1134,9 +1135,14 @@ ol {
     height: 100%;
   }
 }
+@media (max-width: 360px) {
+  .message {
+    text-align: right;
+    margin-left: 34px;
+  }
+}
 
 @media (min-width: 1024px) {
-  padding-bottom: 0;
 }
 
 .hero__container .hero-image {

@@ -5,7 +5,8 @@
   width: 100%;
   text-align: center;
 }
-
+.btn_container_slider2 {
+}
 /* input,
 select {
   text-align: left;
@@ -37,48 +38,85 @@ select {
   max-width: 100%;
   text-align: center;
   line-height: 24px;
-  font-size: 24px;
-    line-height: 32px;
-    white-space: pre-line;
+  line-height: 32px;
+  white-space: pre-line;
+}
+@media (min-width: 360px) {
+  .klyThv {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #004b54;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 }
 @media screen and (max-device-width: 480px) and (orientation: portrait) {
+  .imageCover {
+    display: none;
+  }
+  .btn-danger {
+    margin-left: 10px;
+    margin-top: 60px;
+    width: 208px;
+    background-color: #fad705;
+    color: #024b54;
+    border: none;
+    font-weight: 600;
+  }
+  .btn-danger2 {
+    margin-left: 10px;
+    margin-top: 20px;
+    width: 208px;
+    background-color: #fad705;
+    color: #024b54;
+    border: none;
+    font-weight: 600;
+  }
   .text_form {
     line-height: 27px;
-    font-size: 17px;
+    font-size: 15px;
+    margin-bottom: 15px;
   }
-  .form {
-   
+  .text_form2 {
+    line-height: 27px;
+    font-size: 15px;
   }
- 
-  .btn-primary {
-    width: 300px !important;
-  height: 50px !important;
-  text-align: left;
-    margin-bottom: 10px;
+  .f .form {
   }
 
+  .btn-primary {
+    width: 300px !important;
+    height: 50px !important;
+    text-align: left;
+    margin-bottom: 10px;
+  }
 }
 .btn-primary {
-  color:#024B54;
+  color: #024b54;
   background-color: white;
   border: none;
-  
+
   border-radius: 0px;
   font-size: x-large;
   margin-left: 10px;
   box-shadow: rgb(0 0 0 / 16%) 5px 5px 20px;
-  text-decoration: #024B54;
+  text-decoration: #024b54;
   font-size: 16px;
   width: 150px;
   height: 350px;
 }
 .btn-primary:hover {
   color: white;
-  background-color: #FAD705 !important;
+  background-color: #fad705 !important;
 }
 .btn-primary:active:focus {
   color: white;
-  background-color: #FAD705 !important;
+  background-color: #fad705 !important;
   box-shadow: none;
 }
 .btn_container {
@@ -168,7 +206,6 @@ select {
 }
 
 form {
- 
 }
 .form-control {
   height: 50px;
@@ -195,43 +232,43 @@ input:checked label::after {
   justify-content: center;
   flex-direction: row;
 }
-.animation_size_one{
+.animation_size_one {
   width: 150px;
   margin-left: 40px;
 }
-.animation_size_two{
+.animation_size_two {
   width: 150px;
 }
 
-.image_animation{
-   width: 80px; 
-   margin-top: -5px
+.image_animation {
+  width: 80px;
+  margin-top: -5px;
 }
 
-.animation_desciption{
+.animation_desciption {
   margin-left: 60px;
 }
 
 @media screen and (max-device-width: 480px) and (orientation: portrait) {
-  .animation_size_one{
+  .animation_size_one {
     width: 90px;
   }
-  .animation_size_two{
+  .animation_size_two {
     width: 90px;
   }
-  .image_animation{
-    width: 60px; 
-    margin-top: -5px
- }
- .animation {
-   margin-right: 35px;
- }
- .animation_desciption{
-  margin-left: 28px;
-}
+  .image_animation {
+    width: 60px;
+    margin-top: -5px;
+  }
+  .animation {
+    margin-right: 35px;
+  }
+  .animation_desciption {
+    margin-left: 28px;
+  }
 }
 
-.btn-img{
+.btn-img {
   display: block;
   height: 64px;
   max-width: 100%;
@@ -239,40 +276,40 @@ input:checked label::after {
   margin-bottom: 5px;
 }
 
-.btn_container_slider{
+.btn_container_slider {
   box-shadow: rgb(0 0 0 / 16%) 5px 5px 20px;
   height: 350px;
 
   margin-left: 35px;
   margin-right: 35px;
 }
-.Row_MultiStep{
- display: flex;
- padding-top:25px;
+.Row_MultiStep {
+  display: flex;
+  padding-top: 25px;
 }
-.btn_container_slider_mobile{
+.btn_container_slider_mobile {
   display: none;
 }
 
 @media screen and (max-device-width: 480px) and (orientation: portrait) {
-  .btn_container_slider{
+  .btn_container_slider {
     display: none;
   }
- 
-  .btn_container_slider_mobile{
+
+  .btn_container_slider_mobile {
     display: grid;
     margin-left: 10%;
     width: 100%;
   }
-  .map-img{
+  .map-img {
     margin-left: -45px;
   }
-  .map-text{
+  .map-text {
     width: 100% !important;
   }
-  .input_map{
+  .input_map {
     width: 70% !important;
     margin-left: 11%;
     margin-top: 20px;
-  } 
+  }
 }

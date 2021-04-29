@@ -61,7 +61,6 @@ const StepTwo = ({ setForm, formData, navigation }) => {
       
       <div className="btn_container_slider_mobile_slider">
       <img className="img_slider_sasas" src={totalflat} />
-        <div className="Row_MultiStep">
           <Slider
             left_text="<50 m²"
             right_text=">500 m²"
@@ -72,9 +71,6 @@ const StepTwo = ({ setForm, formData, navigation }) => {
             text="Alternativ eintippen"
             callBackFromParent={myCallBack}
           />
-           
-          
-        </div>
         <Button variant="danger" onClick={next} >Weiter ></Button>
       </div>
      

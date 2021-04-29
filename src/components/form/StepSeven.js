@@ -61,7 +61,7 @@ const StepOne = ({ setForm, formData, navigation }) => {
      
       <div className="progress_bar_container">
         <div className="progress_align">
-        <p className="text_form">Bitte wählen Sie den Qualitätsstandard der Immobilie</p>
+        <p className="text_form2">Bitte wählen Sie den Qualitätsstandard der Immobilie</p>
           <ProgressBar
             color={"#085159"}
             width={"750px"}

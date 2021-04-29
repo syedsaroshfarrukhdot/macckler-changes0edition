@@ -62,6 +62,27 @@ const StepThree = ({ setForm, formData, navigation }) => {
         </div>
         <Button variant="danger" onClick={next} >Weiter ></Button>
       </div>
+
+
+      
+      <div className="btn_container_slider_mobile_slider">
+      <img className="img_slider_sasas" src={totalflat} />
+      <div className="Row_MultiStep">
+          <Slider
+          left_text="<  1900"
+          right_text="> 2020"
+          value="1950"
+          min="1900"
+          max="2020"
+          step="1"
+          text="Alternativ eingeben"
+          callBackFromParent={myCallBack}
+
+          />
+          </div>
+        
+      </div>
+      <Button variant="danger2" onClick={next} >Weiter ></Button>
       <img
         src={formImageTwo}
         alt="img"

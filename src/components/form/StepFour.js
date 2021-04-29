@@ -30,7 +30,7 @@ const StepThree = ({ setForm, formData, navigation }) => {
       <div className="form">
         <div className="progress_bar_container">
         <div className="progress_align">
-        <p className="text_form">
+        <p className="text_form2">
         Wie viele Zimmer hat das Haus?<br></br>
         (ohne Küche und Bad)
         </p>
@@ -62,11 +62,29 @@ const StepThree = ({ setForm, formData, navigation }) => {
           <Button variant="danger" onClick={next} >Weiter ></Button>
         </div>
 
+        <div className="btn_container_slider_mobile_slider">
+      <img className="img_slider_sasas" src={totalflat} />
+      <div className="Row_MultiStep">
+          <Slider
+                          left_text="<  1"
+                          right_text="> 15"
+                          value="5"
+                          min="1"
+                          max="15"
+                          step="1"
+                          unit="th"
+                          text="Alternativ eintippen"
+                          callBackFromParent={myCallBack}
+          />
+          </div>
+        
+      </div>
+      <Button variant="danger2" onClick={next} >Weiter ></Button>
         <img
         src={formImageTwo}
         alt="img"
         className="imageCover"
-      />
+      /> 
       </div>
     );
   };

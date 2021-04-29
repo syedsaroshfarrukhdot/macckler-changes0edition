@@ -1,21 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
-import Header from "./components/header/header"
-import Footer from "./components/footer/footer"
-import MultiStepForm from "./components/form/MultiStepForm"
+import LandingPage from './components/landing-page/LandingPage'
+
 
 
 function App() {
   return (
-    <div>
-   <Header />
-   <div className="site_wrapper">
-    <div className="wrraper_header">
-     
-    </div>
-   <MultiStepForm />
-   </div>
-   </div>
+   <>
+   <LandingPage />
+   </>
   );
 }
 

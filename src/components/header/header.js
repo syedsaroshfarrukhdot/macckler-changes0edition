@@ -18,6 +18,7 @@ export default function Header() {
                     <picture class=" css-8a3wrq"><img loading="lazy" alt="McMakler logo"
                             src="https://a.storyblok.com/f/88871/x/3a265be27d/mcmakler-logo-borders-small.svg"
                             class="header-image" /></picture>
+                          
                 </a>
                
             </div>

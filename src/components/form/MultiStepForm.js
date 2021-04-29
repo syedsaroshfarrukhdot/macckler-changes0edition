@@ -10,11 +10,7 @@ import StepSix from "./StepSix";
 import StepSeven from "./StepSeven";
 import StepEight from "./StepEight";
 import StepNine from "./StepNine";
-import StepTen from "./StepTen";
-import StepEleven from "./StepEleven";
-import StepTwelve from "./StepTwelve";
-import StepThirteen from "./StepThirteen";
-import Submit from "./Submit";
+
 
 import "./styles.css";
 
@@ -28,11 +24,7 @@ const steps = [
   { id: "StepSeven" },
   { id: "StepEight" },
   { id: "StepNine" },
-  { id: "StepTen" },
-  { id: "StepEleven" },
-  { id: "StepThirteen" },
-  { id: "StepTwelve" },
-  { id: "Submit" },
+  
 ];
 
 const defaultData = {
@@ -84,17 +76,7 @@ const MultiStepForm = ({ images }) => {
     case "StepEight":
       return <StepEight {...props} />;
     case "StepNine":
-      return <StepNine {...props} />;
-    case "StepTen":
-      return <StepTen {...props} />;
-    case "StepEleven":
-      return <StepEleven {...props} />;
-    case "StepThirteen":
-      return <StepThirteen {...props} />;
-    case "StepTwelve":
-      return <StepTwelve {...props} />;
-    case "Submit":
-      return <Submit {...props} />;
+      return <StepNine {...props} />;   
     default:
       return null;
   }
