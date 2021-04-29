@@ -297,8 +297,8 @@ input:checked label::after {
   }
 
   .btn_container_slider_mobile {
-    display: grid;
-    margin-left: 10%;
+    display: block;
+    justify-content: center;
     width: 100%;
   }
   .map-img {
@@ -309,7 +309,8 @@ input:checked label::after {
   }
   .input_map {
     width: 70% !important;
-    margin-left: 11%;
+    margin-left: 38%;
     margin-top: 20px;
+    justify-content: center;
   }
 }

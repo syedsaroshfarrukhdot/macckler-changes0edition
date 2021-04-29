@@ -45,6 +45,12 @@
     .header a img {
     margin-left: 0px;
     }
+    .d .title {
+      font-size: 36px !important;
+    line-height: 44px !important;
+      margin-bottom: 15px;
+      
+  }
   }
   
   .d.content2 {
@@ -1207,7 +1213,7 @@
       margin-right: 40px;
     }
   }
-  @media (max-width: 360px) {
+  /* @media (max-width: 360px) {
     .content {
       font-family: Inter, sans-serif;
       font-style: normal;
@@ -1227,7 +1233,8 @@
     .h-3 {
       font-size: 24px;
     }
-  }
+    
+  } */
   
   @media (min-width: 360px) {
     .content .col-sm-12 {
