@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import totalflat from "../../images/total-flat-sq.svg";
+import totalflat from "../../images/totalflat.svg";
 import { Button, ButtonGroup } from "react-bootstrap";
 import ProgressBar from "../progress-bar/ProgressBar";
 import Slider from "../slider/Slider";

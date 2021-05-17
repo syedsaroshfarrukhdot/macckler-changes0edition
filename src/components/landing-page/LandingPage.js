@@ -2,6 +2,11 @@ import React, { Component } from "react";
 import "../landing-page/landingpage.css"
 import Header from "../header/header"
 import MultiStepForm from "../form/MultiStepForm"
+import house from "../../images/house.svg"
+import building from "../../images/bulding.svg"
+import shop from "../../images/shop.svg"
+import tree from "../../images/tree-1.svg"
+
 
 class LandingPage extends Component {
     constructor(props) {
@@ -83,7 +88,7 @@ class LandingPage extends Component {
                           <a class="im">
                             <img
                               loading="eager"
-                              src="https://a.storyblok.com/f/88871/x/e8fb8e31f0/house.svg"
+                              src={house}
                               class="btn-icon"
                               id="1844198"
                               name=""
@@ -100,7 +105,7 @@ class LandingPage extends Component {
                           <a class="im">
                             <img
                               loading="eager"
-                              src="https://a.storyblok.com/f/88871/x/e0b2fc149f/appartment.svg"
+                              src={building}
                               class="btn-icon"
                               id="1844198"
                               name=""
@@ -117,7 +122,7 @@ class LandingPage extends Component {
                           <a class="im">
                             <img
                               loading="eager"
-                              src="https://a.storyblok.com/f/88871/x/091d57c94f/commercial.svg"
+                              src={shop}
                               class="btn-icon"
                               id="1844198"
                               name=""
@@ -134,7 +139,7 @@ class LandingPage extends Component {
                           <a class="im">
                             <img
                               loading="eager"
-                              src="https://a.storyblok.com/f/88871/x/572084447b/land.svg"
+                              src={tree}
                               class="btn-icon"
                               id="1844198"
                               name=""

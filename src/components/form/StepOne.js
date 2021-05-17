@@ -6,6 +6,10 @@ import two from '../../images/two.svg'
 import three from '../../images/three.svg'
 import four from '../../images/four.svg'
 import five from '../../images/five.svg'
+import twoHouse from '../../images/twoHouse.svg'
+import fourhouse from '../../images/four-house.svg'
+import fivehouse from '../../images/house-five.svg'
+import buildingline from '../../images/buildingline.svg'
 import { Button } from 'react-bootstrap';
 import ProgressBar from "../progress-bar/ProgressBar";
 
@@ -49,10 +53,10 @@ const StepOne = ({ setForm, formData, navigation }) => {
 
       <div className="btn_container">
         <Button variant="primary" onClick={next} value="Weiter">&nbsp;<img  className="btn-img" src={house} />Ein­fa­mi­li­en­haus</Button>
-        <Button variant="primary" onClick={next} value="Weiter">&nbsp;<img  className="btn-img" src={two} />Rei­hen­haus</Button>
-        <Button variant="primary" onClick={next} value="Weiter">&nbsp;<img  className="btn-img" src={three} />Dop­pel­haus­häl-<br></br>f­te</Button>
-        <Button variant="primary" onClick={next} value="Weiter">&nbsp;<img  className="btn-img" src={four} />Mehr­fa­mi­li­en­-<br></br>haus</Button>
-        <Button variant="primary" onClick={next} value="Weiter">&nbsp;<img  className="btn-img" src={five} />Wohn- und Ge­-<br></br>schäfts­haus</Button>
+        <Button variant="primary" onClick={next} value="Weiter">&nbsp;<img  className="btn-img" src={twoHouse} />Rei­hen­haus</Button>
+        <Button variant="primary" onClick={next} value="Weiter">&nbsp;<img  className="btn-img" src={buildingline} />Dop­pel­haus­häl-<br></br>f­te</Button>
+        <Button variant="primary" onClick={next} value="Weiter">&nbsp;<img  className="btn-img" src={fourhouse} />Mehr­fa­mi­li­en­-<br></br>haus</Button>
+        <Button variant="primary" onClick={next} value="Weiter">&nbsp;<img  className="btn-img" src={fivehouse} />Wohn- und Ge­-<br></br>schäfts­haus</Button>
       </div>
       <div className="btn_container_mobile">
         <Button variant="primary" onClick={next} value="Weiter">Ein­fa­mi­li­en­haus</Button>

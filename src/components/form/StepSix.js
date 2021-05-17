@@ -5,6 +5,7 @@ import formImageTwo from '../../images/tuev_500.png'
 import own_use from '../../images/own-use.svg'
 import rented from '../../images/rented.svg'
 import half_rented from '../../images/half-rented.svg'
+import fullrented from '../../images/fullrented.svg'
 import free from '../../images/free.svg'
 import { Button } from 'react-bootstrap';
 import styled from "styled-components";
@@ -78,7 +79,7 @@ const StepOne = ({ setForm, formData, navigation }) => {
         <Button variant="primary" onClick={next} value="Weiter">&nbsp;<img  className="btn-img" src={own_use} />Ei­gen­nut­zung</Button>
         <Button variant="primary" onClick={next} value="Weiter">&nbsp;<img  className="btn-img" src={rented} />Ver­mie­tet</Button>
         <Button variant="primary" onClick={next} value="Weiter">&nbsp;<img  className="btn-img" src={half_rented} />Teil­ver­mie­tet</Button>
-        <Button variant="primary" onClick={next} value="Weiter">&nbsp;<img  className="btn-img" src={rented} />Leer­ste­hend</Button>
+        <Button variant="primary" onClick={next} value="Weiter">&nbsp;<img  className="btn-img" src={fullrented} />Leer­ste­hend</Button>
         
         </Styles>
       </div>

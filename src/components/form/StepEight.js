@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import formLogo from '../../images/icon-wohngeld.png'
 import formImageTwo from '../../images/tuev_500.png'
 import verkaufen from '../../images/verkaufen.svg'
-import kauf from '../../images/kaufen.svg'
+import kauf from '../../images/kauf.svg'
 import sonstige from '../../images/sonstige.svg'
 import { Button } from 'react-bootstrap';
 import styled from "styled-components";
